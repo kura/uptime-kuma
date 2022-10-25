@@ -7,8 +7,8 @@ processes = []
   image = "louislam/uptime-kuma:latest"
 
 [mounts]
-source = "uptimekuma_data"
-destination = "/app/data"
+  source = "uptimekuma_data"
+  destination = "/app/data"
 
 [env]
   PORT = "8080"
@@ -18,7 +18,6 @@ destination = "/app/data"
   auto_rollback = true
 
 [[services]]
-  http_checks = []
   internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
@@ -43,3 +42,4 @@ destination = "/app/data"
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+

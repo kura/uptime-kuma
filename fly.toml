@@ -7,7 +7,7 @@ kill_timeout = "5s"
   auto_rollback = true
 
 [build]
-  image = "ghcr.io/kura/uptime-kuma:latest"
+  image = "louislam/uptime-kuma:latest"
 
 [env]
   PORT = "8080"

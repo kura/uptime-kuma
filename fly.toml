@@ -30,6 +30,8 @@ kill_timeout = "5s"
   [[services.ports]]
     port = 443
     handlers = ["tls", "http"]
+    tls_options = { "alpn" = ["h2", "http/1.1"], "versions" = ["TLSv1.2", "TLSv1.3"] }
+
   [services.concurrency]
     type = "connections"
     hard_limit = 25
